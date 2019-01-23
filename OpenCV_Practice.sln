@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "005 BasicShape", "005 Basic
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "006 PixerOperation", "006 PixerOperation\006 PixerOperation.vcxproj", "{A6503589-39C4-40B2-BF0C-05197A238562}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "007 ColorReduce", "007 ColorReduce\007 ColorReduce.vcxproj", "{77FCFB18-4FC4-42C3-B689-98371CF301B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{A6503589-39C4-40B2-BF0C-05197A238562}.Release|x64.Build.0 = Release|x64
 		{A6503589-39C4-40B2-BF0C-05197A238562}.Release|x86.ActiveCfg = Release|Win32
 		{A6503589-39C4-40B2-BF0C-05197A238562}.Release|x86.Build.0 = Release|Win32
+		{77FCFB18-4FC4-42C3-B689-98371CF301B9}.Debug|x64.ActiveCfg = Debug|x64
+		{77FCFB18-4FC4-42C3-B689-98371CF301B9}.Debug|x64.Build.0 = Debug|x64
+		{77FCFB18-4FC4-42C3-B689-98371CF301B9}.Debug|x86.ActiveCfg = Debug|Win32
+		{77FCFB18-4FC4-42C3-B689-98371CF301B9}.Debug|x86.Build.0 = Debug|Win32
+		{77FCFB18-4FC4-42C3-B689-98371CF301B9}.Release|x64.ActiveCfg = Release|x64
+		{77FCFB18-4FC4-42C3-B689-98371CF301B9}.Release|x64.Build.0 = Release|x64
+		{77FCFB18-4FC4-42C3-B689-98371CF301B9}.Release|x86.ActiveCfg = Release|Win32
+		{77FCFB18-4FC4-42C3-B689-98371CF301B9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

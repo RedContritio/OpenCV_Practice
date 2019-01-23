@@ -9,7 +9,7 @@
 using std::cout ;
 using std::endl ;
 
-void ColorSpaceReduce( cv::Mat& img, cv::Size sz)
+void ColorNeg( cv::Mat& img, cv::Size sz)
 {
 	for(int i=0 ;i<sz.height ;i++ )
 	{
@@ -30,9 +30,11 @@ int main( void)
 	printf( "%d %d\n", img.cols, img.rows);
 //	cv::resize( img, img, sz);
 
-	ColorSpaceReduce( img, sz);
+	cv::Mat img2 =img.clone();
+	ColorNeg( img2, sz);
 
 	cv::imshow( "1", img);
+	cv::imshow( "2", img2);
 	cv::waitKey( 0);
 	return 0;
 }
