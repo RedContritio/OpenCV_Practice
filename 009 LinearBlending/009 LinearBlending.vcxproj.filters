@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ROI.h">
+    <ClInclude Include="LinearMixer.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

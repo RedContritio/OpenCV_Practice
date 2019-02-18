@@ -4,11 +4,21 @@
 #include <core/core.hpp>
 #include <highgui/highgui.hpp>
 
-#define MethodSelector 3
-void ColorReduce( cv::Mat& img, cv::Mat& dst)
+enum CR_METHOD
 {
-	int divideWidth = 0x20;
-#if MethodSelector == 0 
+	CRM_LOOKUPTABLE, CRM_DIV, CRM_ITERATOR, CRM_ATDIV, CRM_ALLCHANNELS, CRM_MAX
+};
+
+#define NAME(name) (#name)
+const char* CR_METHOD_NAME[]
+{
+	NAME(CRM_LOOKUPTABLE), NAME(CRM_DIV), NAME(CRM_ITERATOR), NAME(CRM_ATDIV), NAME(CRM_ALLCHANNELS), NAME(CRM_MAX)
+};
+
+template<int method> void ColorReduce( cv::Mat& img, cv::Mat& dst, int divideWidth = 0x40);
+
+template<> void ColorReduce<CRM_LOOKUPTABLE>( cv::Mat& img, cv::Mat& dst, int divideWidth)
+{
 	uchar table[0x100];
 	for( int i=0; i<0x100; i++)
 	{
@@ -18,7 +28,10 @@ void ColorReduce( cv::Mat& img, cv::Mat& dst)
 	uchar *p = LookUpTable.data;
 	for( int i=0; i<0x100; i++) p[i] = table[i];
 	cv::LUT( img, LookUpTable, dst);
-#elif MethodSelector == 1
+}
+
+template<> void ColorReduce<CRM_DIV>( cv::Mat& img, cv::Mat& dst, int divideWidth)
+{
 	dst = img.clone();
 	int r = img.rows;
 	int c = img.cols* img.channels();
@@ -30,7 +43,11 @@ void ColorReduce( cv::Mat& img, cv::Mat& dst)
 			data[j] = data[j]/ divideWidth* divideWidth+ ( divideWidth/ 2);
 		}
 	}
-#elif MethodSelector == 2
+}
+
+
+template<> void ColorReduce<CRM_ITERATOR>( cv::Mat& img, cv::Mat& dst, int divideWidth)
+{
 	dst = img.clone();
 	cv::Mat_<cv::Vec3b>::iterator it = dst.begin<cv::Vec3b>();
 	cv::Mat_<cv::Vec3b>::iterator end = dst.end<cv::Vec3b>();
@@ -41,7 +58,11 @@ void ColorReduce( cv::Mat& img, cv::Mat& dst)
 		(*it)[1] = (*it)[1]/ divideWidth* divideWidth+ ( divideWidth/ 2);
 		(*it)[2] = (*it)[2]/ divideWidth* divideWidth+ ( divideWidth/ 2);
 	}
-#else
+}
+
+
+template<> void ColorReduce<CRM_ATDIV>( cv::Mat& img, cv::Mat& dst, int divideWidth)
+{
 	dst = img.clone();
 	int r = dst.rows;
 	int c = dst.cols;
@@ -55,6 +76,21 @@ void ColorReduce( cv::Mat& img, cv::Mat& dst)
 			}
 		}
 	}
-#endif
 }
+
+template<> void ColorReduce<CRM_ALLCHANNELS>( cv::Mat& img, cv::Mat& dst, int divideWidth)
+{
+	dst = img.clone();
+	int r = dst.rows;
+	int cn = dst.cols *dst.channels();
+	for( int i = 0; i < r; ++i)
+	{
+		uchar *p = dst.ptr(i);
+		for( int j = 0; j < cn; ++j)
+		{
+			p[j] = p[j]/divideWidth*divideWidth + divideWidth/2;
+		}
+	}
+}
+
 #endif
