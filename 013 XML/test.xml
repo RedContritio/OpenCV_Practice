@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<test_id>2333</test_id>
+<CameraMatrix type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>3</cols>
+  <dt>d</dt>
+  <data>
+    1. 2. 3. 4. 5. 6. 7. 8. 9.</data></CameraMatrix>
+<RandomInteger>
+  <_><x>174</x>
+    <y>188</y>
+    <value>
+      23 89 141 99 40 60 131 50 93</value></_>
+  <_><x>136</x>
+    <y>185</y>
+    <value>
+      110 21 145 145 8 142 122 10 37</value></_>
+  <_><x>164</x>
+    <y>88</y>
+    <value>
+      37 74 65 37 97 149 76 8 162</value></_>
+  <_><x>123</x>
+    <y>46</y>
+    <value>
+      179 59 98 103 108 88 140 0 129</value></_>
+  <_><x>100</x>
+    <y>48</y>
+    <value>
+      38 72 104 85 82 1 11 49 180</value></_>
+  <_><x>158</x>
+    <y>68</y>
+    <value>
+      164 77 176 64 92 120 127 23 123</value></_>
+  <_><x>25</x>
+    <y>78</y>
+    <value>
+      36 36 22 110 148 23 15 0 142</value></_>
+  <_><x>144</x>
+    <y>127</y>
+    <value>
+      111 171 196 112 36 190 175 186 64</value></_>
+  <_><x>105</x>
+    <y>197</y>
+    <value>
+      7 2 32 23 119 60 33 4 170</value></_>
+  <_><x>150</x>
+    <y>130</y>
+    <value>
+      154 127 76 19 101 174 45 5 145</value></_></RandomInteger>
+</opencv_storage>
