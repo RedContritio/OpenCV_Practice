@@ -117,7 +117,6 @@
   <ItemGroup>
     <ClCompile Include="imgproc_.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="_imgproc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="imgproc_.h" />
