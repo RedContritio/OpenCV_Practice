@@ -18,19 +18,5 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="imgproc_.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="MatResize.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="imgproc_.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CompileMessage.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

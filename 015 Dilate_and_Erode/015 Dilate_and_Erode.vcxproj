@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{41F3B4A5-A3CA-4DE5-A222-4B0FFC739334}</ProjectGuid>
-    <RootNamespace>My014Filters</RootNamespace>
+    <ProjectGuid>{5F9CC672-1AE0-48DC-B9C3-B436A38BAD4D}</ProjectGuid>
+    <RootNamespace>My015DilateandErode</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,13 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="imgproc_.cpp" />
     <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CompileMessage.h" />
-    <ClInclude Include="imgproc_.h" />
-    <ClInclude Include="MatResize.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

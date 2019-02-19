@@ -4,6 +4,7 @@
 
 #include "MatResize.h"
 #include "imgproc_.h"
+#include "CompileMessage.h"
 
 #include <iostream>
 
@@ -14,6 +15,8 @@ const int sc_width = 1536;
 const int sc_height = 864;
 
 void BlurTest(cv::Mat& img);
+void MedianFilterTest(cv::Mat& img);
+void BilateralFilterTest(cv::Mat& img);
 void FiltersTest(cv::Mat& img);
 
 void TrackBarTest(cv::Mat& img);
@@ -31,22 +34,28 @@ int main(int argc, char *argv[])
 	srand((unsigned)time(NULL));
 	img = cv::imread("1.jpg");
 
-	MatResize(img, *2/3);
+	MatResize(img, *20/60);
 
-	cv::Mat img_ = img.clone();
-	MatResize(img_, *1/3);
+	cv::Mat img_ = img;
+	//MatResize(img_, *1/3);
 	cv::imshow("",img_);
 	cv::moveWindow("", 0, 0);
 
 	//BlurTest(img);
+	
+	printf("is same ? %d\n", RedContritio::Experiment::operator==(img, img));
 	cv::Mat dst;
-	RedContritio::Experiment::salt(img_, dst, 0.3);
+	RedContritio::Experiment::salt(img_, dst, 0.01);
 	cv::imshow( "salt", dst);
 	cv::moveWindow("salt", 0, img_.rows);
-
+	printf("is same ? %d\n", RedContritio::Experiment::operator==(dst, img));
+	//MatDifference(dst, img);
+	
+	MedianFilterTest(dst);
+	//BilateralFilterTest(dst);
 	//FiltersTest(img);
 
-	TrackBarTest(img);
+	//TrackBarTest(img);
 
 	while(static_cast<char>(cv::waitKey(1))!=' ');
 	return 0;
@@ -59,14 +68,44 @@ void BlurTest(cv::Mat& img)
 	cv::Mat dst, dst2;
 	cv::blur(img, dst, cv::Size(10, 10));
 	cv::imshow("dst", dst);
-	return ;
+	//return ;
 
 	// I do not want to run it 
-	RedContritio::Experiment::blur(img, dst2, cv::Size(10, 10)); // As we all know, function in RedContritio is slow and filled with bugs
+	RedContritio::Experiment::blur(img, dst2, cv::Size(1, 1)); // As we all know, function in RedContritio is slow and filled with bugs
 	cv::imshow("dst2", dst2);
 	return ;
 }
 
+void MedianFilterTest(cv::Mat& img)
+{
+#pragma message(__MESSAGE_INFO("There are some differences in Median Filter's effect, but I don't know why."))
+	int ksz = 5;
+	auto sz = cv::Size(ksz, ksz);
+	cv::Mat dst, dst2;
+	cv::medianBlur(img, dst, ksz);
+	cv::imshow("dst", dst);
+	//return ;
+
+	RedContritio::Experiment::MedianFilter_Vec3b(img, dst2, sz); // again, function in RedContritio is slow and filled with bugs
+	
+	RedContritio::Experiment::MatDifference(dst, dst2, false);
+	cv::imshow("dst2", dst2);
+	return ;
+}
+
+void BilateralFilterTest(cv::Mat& img)
+{
+	int d = 3;
+	cv::Mat dst;
+	cv::bilateralFilter(img, dst, d, d*2, d/2);
+	cv::imshow("dst", dst);
+	printf("is same ? %d\n", RedContritio::Experiment::operator==(dst, img));
+	RedContritio::Experiment::MatDifference(dst, img);
+	//return ;
+
+	//cv::imshow("dst2", dst2);
+	return ;
+}
 #define DST(name) DST_##name
 #define DTITLE(name) "DST_" #name
 #define DIMSHOW(name) cv::imshow(DTITLE(name), DST(name))
