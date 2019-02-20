@@ -115,7 +115,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BufferLayer.cpp" />
+    <ClCompile Include="imgproc_.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Morphology_.cpp" />
+    <ClCompile Include="StandardWindow.cpp" />
+    <ClCompile Include="Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BufferLayer.h" />
+    <ClInclude Include="imgproc_.h" />
+    <ClInclude Include="MatResize.h" />
+    <ClInclude Include="Morphology_.h" />
+    <ClInclude Include="RedContritioMain.h" />
+    <ClInclude Include="StandardWindow.h" />
+    <ClInclude Include="Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

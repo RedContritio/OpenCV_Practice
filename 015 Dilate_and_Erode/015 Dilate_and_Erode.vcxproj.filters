@@ -18,5 +18,43 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="BufferLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StandardWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc_.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Morphology_.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MatResize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BufferLayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StandardWindow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RedContritioMain.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc_.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Morphology_.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
