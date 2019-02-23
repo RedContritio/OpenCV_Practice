@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{A3BFB854-A931-488D-A2A9-EF5EFFDD629E}</ProjectGuid>
-    <RootNamespace>My019FindEdge</RootNamespace>
+    <ProjectGuid>{4B87C125-DC53-4A20-8127-7EC5C85C42ED}</ProjectGuid>
+    <RootNamespace>My021remap</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -116,14 +116,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="threshold.cpp" />
-    <ClCompile Include="_edgedetection.cpp" />
     <ClCompile Include="_imgproc.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="threshold.h" />
-    <ClInclude Include="TypeOperationEx_.hpp" />
-    <ClInclude Include="_edgedetection.h" />
+    <ClInclude Include="_extypeop.hpp" />
     <ClInclude Include="_imgproc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

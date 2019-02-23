@@ -3,9 +3,6 @@
 #pragma once
 #include <core/core.hpp>
 
-#include "threshold.h"
-#include "_edgedetection.h"
-
 namespace RedContritio
 {
 	namespace Experiment
@@ -13,7 +10,7 @@ namespace RedContritio
 
 		#define SCALE_RATE(x,operation) x operation
 
-		#define MatResize(img,operation) cv::resize(img, img, cv::Size(SCALE_RATE(img.cols,operation), SCALE_RATE(img.rows,operation)));
+		#define MatResize(img,operation) cv::resize(img, img, SCALE_RATE(img.size(), operation))
 
 		void blur(cv::Mat& src, cv::Mat& dst, cv::Size ksize, cv::Point anchor = cv::Point(-1,-1));
 		void GaussianBlur(cv::Mat& src, cv::Mat& dst, cv::Size ksize, double sigmaX = 0);

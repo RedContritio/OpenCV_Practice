@@ -21,24 +21,12 @@
     <ClCompile Include="_imgproc.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="threshold.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="_edgedetection.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="_extypeop.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="_imgproc.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="threshold.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="TypeOperationEx_.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="_edgedetection.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

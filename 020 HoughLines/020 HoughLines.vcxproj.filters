@@ -21,10 +21,7 @@
     <ClCompile Include="_imgproc.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="threshold.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="_edgedetection.cpp">
+    <ClCompile Include="_line.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,13 +29,10 @@
     <ClInclude Include="_imgproc.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="threshold.h">
+    <ClInclude Include="_extypeop.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="TypeOperationEx_.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="_edgedetection.h">
+    <ClInclude Include="_line.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

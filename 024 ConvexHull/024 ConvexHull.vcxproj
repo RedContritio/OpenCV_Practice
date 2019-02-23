@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{A3BFB854-A931-488D-A2A9-EF5EFFDD629E}</ProjectGuid>
-    <RootNamespace>My019FindEdge</RootNamespace>
+    <ProjectGuid>{9416BC68-B9B6-43C3-BACC-81A46FC1566C}</ProjectGuid>
+    <RootNamespace>My024ConvexHull</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,16 +115,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="threshold.cpp" />
-    <ClCompile Include="_edgedetection.cpp" />
-    <ClCompile Include="_imgproc.cpp" />
+    <ClInclude Include="_extypeop.hpp" />
+    <ClInclude Include="_imgproc.h" />
+    <ClInclude Include="_scroll.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="threshold.h" />
-    <ClInclude Include="TypeOperationEx_.hpp" />
-    <ClInclude Include="_edgedetection.h" />
-    <ClInclude Include="_imgproc.h" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="_imgproc.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

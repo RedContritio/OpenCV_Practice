@@ -1,4 +1,4 @@
-#include "TypeOperationEx_.hpp"
+#include "_extypeop.hpp"
 #include "_imgproc.h"
 #include "highgui/highgui.hpp"
 
@@ -16,7 +16,6 @@ namespace RedContritio
 {
 	namespace Experiment
 	{
-		#define __LIMIT_POSITION(pic,x,y) ( ((x)>=0) && ((x)<((pic).cols)) && ((y)>=0) && ((y)<((pic).rows)) )
 		void blur(cv::Mat& src, cv::Mat& dst, cv::Size ksize, cv::Point anchor)
 		{
 			dst = cv::Mat(src.size(), src.type());
